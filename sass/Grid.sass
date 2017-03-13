@@ -1,5 +1,63 @@
+
+/*
+    =========== Containers widths ===========
+
+.container
+    width: 80%
+    margin: 0 auto
+
+.container-full
+    width: 100%
+    
+
+
+/*
+    =========== Flexbox grid system, mobile friendly ===========
+
+
+$columns: 12
+
 .row
     display: flex
 
-    .col
-        flex: 1
+    [class*='col']
+        margin: .6rem
+        padding: .6rem
+
+//mobiles - 320px
+@media only screen and (min-width : $mobile)
+    [class*='col-m']
+
+    @for $i from 1 through $columns
+        .col-m-#{ $i }
+            width: (100% / $columns) * $i
+
+//large mobiles - 480px
+@media only screen and (min-width : $largemobile)
+    [class*='col-lm']
+
+    @for $i from 1 through $columns
+        .col-lm-#{ $i }
+            width: (100% / $columns) * $i      
+
+//tablets - 768px
+@media only screen and (min-width : $tablet)
+    [class*='col-t']
+
+    @for $i from 1 through $columns
+        .col-t-#{ $i }
+            width: (100% / $columns) * $i    
+
+//desktops - 1024px
+@media only screen and (min-width : $desktop)
+
+    [class*='col-d']
+        margin: .6rem
+        padding: .6rem
+
+
+    @for $i from 1 through $columns
+        .col-d-#{ $i }
+            width: (100% / $columns) * $i
+
+
