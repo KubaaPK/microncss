@@ -1,0 +1,59 @@
+.button,
+button,
+input[type="button"],
+input[type="submit"]
+
+    padding: 0 2rem
+
+    background-color: transparent
+    border: 1px solid #000000
+    
+    font:
+        size: 1.5rem
+    line-height: 3.6rem
+    transition: .2s
+    &:hover
+        background-color: #eee
+        cursor: pointer
+        transition: .2s
+
+    
+    &.button-primary
+        background-color: $primary 
+        color: #FFFFFF
+        border: 1px solid darken($primary, 5%)
+        transition: .2s
+        &:hover
+            background-color: darken($primary, 5%)
+            cursor: pointer
+            transition: .2s
+    
+    &.button-success
+        background-color: $success 
+        color: #FFFFFF
+        border: 1px solid darken($success, 5%)
+        transition: .2s
+        &:hover
+            background-color: darken($success, 5%)
+            cursor: pointer
+            transition: .2s
+
+    &.button-danger
+        background-color: $danger 
+        color: #FFFFFF
+        border: 1px solid darken($danger, 5%)
+        transition: .2s
+        &:hover
+            background-color: darken($danger, 5%)
+            cursor: pointer
+            transition: .2s
+
+    &.button-warning
+        background-color: $warning 
+        color: #FFFFFF
+        border: 1px solid darken($warning, 5%)
+        transition: .2s
+        &:hover
+            background-color: darken($warning, 5%)
+            cursor: pointer
+            transition: .2s
